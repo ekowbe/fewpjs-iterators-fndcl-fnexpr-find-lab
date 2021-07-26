@@ -1,16 +1,9 @@
 
 function superbowlWin(objs) {
-    objs.find(function(tournament) {
-        // console.log(tournament)
-        // console.log(tournament.result)
-        // console.log(tournament.year)
-        if (tournament.result === "W") {
-            return tournament.year
-        }
-        else {
-            return undefined
-        }
-    })
+    const result = objs.find( ({result}) => result === "W")
+    return result.year
+        
+     
 }
 
 const record = [
@@ -19,3 +12,4 @@ const record = [
     {year: "2016", result: "N/A"}
     //...
   ]
+
